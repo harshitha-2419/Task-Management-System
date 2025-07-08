@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Task Management System</title>
+    <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+    <div class="background-circles">
+        <div class="circle circle1"></div>
+        <div class="circle circle2"></div>
+        <div class="circle circle3"></div>
+        <div class="circle circle4"></div>
+        <div class="circle circle5"></div>
+    </div>
+    <div class="container">
+        <h1>Task Management System</h1>
+        <form id="task-form">
+            <div class="form-group">
+                <label for="title">Task Title</label>
+                <input type="text" id="title" name="title" required />
+            </div>
+            <div class="form-group">
+                <label for="description">Description</label>
+                <textarea id="description" name="description" rows="3"></textarea>
+            </div>
+            <div class="form-group">
+                <label for="due-date">Due Date</label>
+                <input type="date" id="due-date" name="due-date" required />
+            </div>
+            <button type="submit">Add Task</button>
+            <div id="error-message" class="error-message" role="alert" aria-live="assertive"></div>
+        </form>
+
+        <div class="filters">
+            <label>Filter Tasks:</label>
+            <select id="filter-tasks">
+                <option value="all">All</option>
+                <option value="complete">Complete</option>
+                <option value="incomplete">Incomplete</option>
+            </select>
+        </div>
+
+        <ul id="task-list"></ul>
+        <div id="flash-message" class="flash-message" role="alert" aria-live="assertive" aria-atomic="true" style="display:none;"></div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
