@@ -40,6 +40,6 @@ This is a simple web-based task management system built with HTML, CSS, and Java
 This project is open source and free to use.
 
 
-# command to run
+## command to run
 
 start index.html 
